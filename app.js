@@ -9,6 +9,10 @@ app.set("view engine", "ejs");
 // set up middleware to parse form data
 app.use(express.urlencoded({ extended: true }));
 
+// serve static files
+const assetsPath = path.join(__dirname, "public");
+app.use(express.static(assetsPath))
+
 //date formatting
 function getOrdinalSuffix(day) {
     if (day > 3 && day < 21) return 'th'; // Covers 4th to 20th

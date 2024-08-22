@@ -1,0 +1,14 @@
+.message-container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    border: 1px solid black;
+    padding-left: 1%;
+    width: 15%;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+}

@@ -1,17 +1,19 @@
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="/styles.css">
     <title>
         <%= title %>
     </title>
 </head>
 <body>
-    <h1>Home Page</h1>
-    <h2>Messages</h2>
-    <h3><a href="/new">Send a message here</a></h3>
+    <h1>Your Secret Messages</h2>
+    <h2><a href="/new">Send a message here</a></h3>
     <% messages.forEach((message) => { %>
-        <p>From <%- message.user %>, on <%- message.added %></p>
-        <p><%- message.text %></p>
-        <a href="/message/<%= message.id %>"><button>Open</button></a>
+        <div class="message-container">
+            <p>From <%- message.user%></p>
+            <a href="/message/<%= message.id %>"><button>Open</button></a>
+        </div>
+
     <% }) %>
 </body>
 </html>
