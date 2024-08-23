@@ -52,10 +52,10 @@ const messages = [
       id: Date.now()+1
     },
     {
-        text: "Howdy friends!",
-        user: "Bubba",
-        added: formatDate(new Date()),
-        id: Date.now()+2
+      text: "Howdy friends!",
+      user: "Bubba",
+      added: formatDate(new Date()),
+      id: Date.now()+2
     }
   ];
 

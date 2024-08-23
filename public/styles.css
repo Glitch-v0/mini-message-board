@@ -1,14 +1,79 @@
+body {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    font-size: 10px;
+    background-color: rgb(203, 254, 237);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2, h3 {
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;  
+    color: black;
+}
+
+#send-message-link {
+    color: black;
+    background-color: rgb(255, 255, 255, 0.75);
+    width: 40%;
+    text-align: center
+    ;
+}
+
+.messages-container {
+    display: grid;
+    align-items: center;
+    grid-template-columns:repeat(auto-fill, 55vw);
+    gap: 25px;
+    grid-template-rows: auto;
+    
+}
+
 .message-container {
     display: grid;
     align-items: center;
+    justify-items: space-around;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto;
     border: 1px solid black;
-    padding-left: 1%;
-    width: 15%;
+    box-shadow: 1px 1px 1px #333333;
+    background-color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+button {
+    width: 100%;
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    border: none;
 }
 
 form {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 25px;
+    padding: 10px;
+    background-color: white;
+}
+
+input, textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+label {
+    font-size: 2rem;
 }

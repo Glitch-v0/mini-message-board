@@ -1,5 +1,8 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css">
     <title>
         <%= title %>
@@ -7,13 +10,15 @@
 </head>
 <body>
     <h1>Your Secret Messages</h2>
-    <h2><a href="/new">Send a message here</a></h3>
-    <% messages.forEach((message) => { %>
-        <div class="message-container">
-            <p>From <%- message.user%></p>
-            <a href="/message/<%= message.id %>"><button>Open</button></a>
-        </div>
-
-    <% }) %>
+    <h2 id="send-message-link"><a href="/new">Send a message</a></h2>
+    <div class="messages-container">
+        <% messages.forEach((message) => { %>
+            <div class="message-container">
+                <p>From <%- message.user%></p>
+                <a href="/message/<%= message.id %>"><button>Open</button></a>
+            </div>
+        <% }) %>
+    </div>
+    
 </body>
 </html>
