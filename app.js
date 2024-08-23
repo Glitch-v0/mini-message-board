@@ -64,8 +64,8 @@ app.get("/", (req, res) => res.render("index", { title: "Mini Message Board", me
 app.get("/new", (req, res) => res.render("new", { title: "New Message" }));
 app.post("/new", (req, res) => {
     // get message data from form and send back to home page
-    const { messageText, messageUser } = req.body;
-    messages.push({ text: messageText, user: messageUser, added: new Date(), id: Date.now() });
+    const { message, messageUser } = req.body;
+    messages.push({ text: message, user: messageUser, added: new Date(), id: Date.now() });
     res.redirect("/");
 })
 app.get("/message/:id", (req, res) => {
