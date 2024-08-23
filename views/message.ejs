@@ -7,10 +7,21 @@
     </title>
 </head>
 <body>
-    <h1>Message Details:</h1>
-    <h2>From: <%= messageToDisplay.user %></h2>
-    <h3>On: <%= messageToDisplay.added %></h3>
-    <h3>Message: <%= messageToDisplay.text %></h3>
-    <a href="/"><button>Go Back</button></a>
+    <div id="message-details-container">
+        <h1>Message Details:</h1>
+        <h2>From: <%= messageToDisplay.user %></h2>
+        <div id="date-container">
+            <h1>Date:</h3>
+            <h2><%= messageToDisplay.added %></h3>
+        </div>
+        <div id="message-container">
+            <h1>Message:</h3>
+            <h2><%= messageToDisplay.text %></h3>
+        </div>
+        <a href="/"><button id="return-button">Go Back</button></a>
+    </div>
+    
+    
+    
 </body>
 </html>

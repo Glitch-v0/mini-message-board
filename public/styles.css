@@ -1,17 +1,73 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
 body {
     display: flex;
     flex-direction: column;
     place-items: center;
     font-size: 10px;
     background-color: rgb(203, 254, 237);
+    padding: 2%;
+    gap: 25px;
 }
 
 h1 {
     font-size: 3rem;
+    text-wrap: balance;
+    text-align: center;
 }
 
 h2, h3 {
     font-size: 2.5rem;
+    text-wrap: balance;
+    text-align: center;
 }
 
 p {
@@ -37,7 +93,16 @@ a {
     grid-template-columns:repeat(auto-fill, 55vw);
     gap: 25px;
     grid-template-rows: auto;
-    
+}
+
+#message-details-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 2%;
+    justify-self: center;
+    gap: 50px;
+    margin-top: 2%;
 }
 
 .message-container {
@@ -53,11 +118,20 @@ a {
     padding-right: 5%;
 }
 
+#message-container, #date-container {
+    display: flex;
+    flex-direction: column;
+}
+
 button {
     width: 100%;
     font-size: 1.5rem;
     color: rgb(0, 0, 0);
     border: none;
+}
+
+#return-button {
+    font-size: 2rem;
 }
 
 form {
@@ -70,10 +144,33 @@ form {
 }
 
 input, textarea {
-    width: 100%;
+    width: 95%;
     box-sizing: border-box;
 }
 
 label {
     font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    padding: 0;
+    margin: 0;
+    gap: 25px;
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
+        
+    }
+
+    h2, h3 {
+        font-size: 1.75rem;
+    }
+
+    #message-details-container {
+        background-color: white;
+        margin-top: 25%;
+        margin-bottom: 25%;
+    }
 }

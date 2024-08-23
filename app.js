@@ -46,7 +46,7 @@ const messages = [
       id: Date.now()
     },
     {
-      text: "Hello World!",
+      text: "Hey, did you get that super secret message I sent you?",
       user: "Charles",
       added: formatDate(new Date()),
       id: Date.now()+1
