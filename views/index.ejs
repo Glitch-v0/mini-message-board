@@ -14,7 +14,7 @@
     <div class="messages-container">
         <% messages.forEach((message) => { %>
             <div class="message-container">
-                <p>From <%- message.user%></p>
+                <p>From: <%- message.username%></p>
                 <a href="/message/<%= message.id %>"><button>Open</button></a>
             </div>
         <% }) %>
