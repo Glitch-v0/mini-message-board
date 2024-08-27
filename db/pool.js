@@ -8,5 +8,5 @@ module.exports = new Pool({
   user: USER,
   database: DATABASE,
   password: PASSWORD,
-  port: PORT
+  port: DB_PORT
 });
