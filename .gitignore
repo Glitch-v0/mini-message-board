@@ -1,2 +1,5 @@
 /node_modules
 .env
+/db/delete.js
+/db/populatedb.js
+/db/printdb.js
