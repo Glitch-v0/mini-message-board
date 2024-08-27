@@ -42,9 +42,14 @@ async function viewMessage(req, res) {
     }
 }
 
+async function renderInvalidPageError(req, res) {
+    res.render("error", { title: "Error", error: "Page Not Found" })
+}
+
 module.exports = {
     renderIndexPage,
     renderNewMessagePage,
+    renderInvalidPageError,
     createNewMessage,
     viewMessage
 }

@@ -1,6 +1,6 @@
 #! /usr/bin/env node
-const { argv } = require('node:process');
 const { Client } = require("pg");
+require("dotenv").config();
 
 const SQL = `
 DROP TABLE messages;
@@ -9,8 +9,13 @@ DROP TABLE messages;
 console.log(SQL);
 async function main() {
   
-  const connectionURL = process.argv[2]
-  console.log({connectionURL})
+  //Will attempt to use a provided connection string from CLI
+  let connectionURL = process.argv[2]
+  if (!connectionURL) {
+    // Provides a connection string if not provided in CLI
+    connectionURL = process.env.CONNECTION_STRING
+    console.log(`Using connection string: ${connectionURL}`)
+  }
   console.log("seeding...");
   const client = new Client({
     connectionString: connectionURL,
