@@ -7,7 +7,7 @@ const routes = require("./routes/userRoutes")
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-// set up middleware to parse form data
+// set up form-parsing middleware
 app.use(express.urlencoded({ extended: true }));
 
 // serve static files
